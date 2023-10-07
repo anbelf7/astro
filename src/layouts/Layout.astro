@@ -1,6 +1,6 @@
 ---
-//import Header from "../components/Header.astro";
-//import Footer from "../components/Footer.astro";
+import HeaderTest from "../components/HeaderTest.astro";
+import FooterTest from "../components/FooterTest.astro";
 const { title = "Title" } = Astro.props;
 ---
 
@@ -14,9 +14,11 @@ const { title = "Title" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="grid min-h-screen grid-rows-[auto,1fr,auto] scroll-smooth bg-[#f6f6f6] text-slate-800">
-    <!-- <Header /> -->
+  <body
+    class="grid min-h-screen grid-rows-[auto,1fr,auto] scroll-smooth bg-[#f6f6f6] text-slate-800"
+  >
+    <HeaderTest />
     <slot />
-    <!-- <Footer /> -->
+    <FooterTest />
   </body>
 </html>
