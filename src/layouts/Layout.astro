@@ -1,6 +1,7 @@
 ---
 import HeaderTest from "../components/HeaderTest.astro";
 import FooterTest from "../components/FooterTest.astro";
+
 const { title = "Title" } = Astro.props;
 ---
 
@@ -14,11 +15,16 @@ const { title = "Title" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
+
   <body
-    class="grid min-h-screen grid-rows-[auto,1fr,auto] scroll-smooth bg-[#f6f6f6] text-slate-800"
+    class="grid min-h-screen grid-rows-[auto,1fr,auto] scroll-smooth bg-zinc-50 text-slate-800"
   >
     <HeaderTest />
     <slot />
     <FooterTest />
+
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
 </html>

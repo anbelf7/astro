@@ -4,43 +4,24 @@ import { Image } from "astro:assets";
 // I file nella directory /public vengono sempre serviti o copiati nella cartella di compilazione così come sono, senza elaborazione.
 // import localImage from '../images/localImage.png';
 import Main from "./Main.astro";
-import navigation from "../data/navigation.json";
-
-const pathname = Astro.url.pathname;
-const currentPath = pathname === "/" ? "/" : pathname.slice(1);
+import Navigation from "./Navigation.astro";
+import Hamburger from "./Hamburger.astro";
 ---
 
-<header class="mb-10 bg-red-500 px-24 py-12 max-sm:px-5 max-sm:py-10 sm:mb-20">
-  <Main cl="flex flex-row justify-between items-center">
-    <a href="/" class="flex items-center gap-x-4">
+<header class="mb-10 bg-red-500 py-6 sm:mb-20 sm:py-10">
+  <Main cl="flex flex-wrap flex-row items-center justify-between">
+    <a href="/" class="flex flex-[0_1_auto] items-center gap-x-4">
       <Image
         src="/favicon.svg"
         alt="logo"
         width={64}
         height={64}
         format="webp"
-        class="w-16"
+        class="w-12 sm:w-16"
       />
-      <p class="text-3xl uppercase">logo</p>
+      <p class="text-xl uppercase sm:text-3xl">logo</p>
     </a>
-    <ul class="flex gap-x-8">
-      {
-        navigation.map((page) => (
-          <li>
-            <a
-              href={page.path}
-              class:list={[
-                "font-medium hover:text-white/50",
-                currentPath === page.path
-                  ? "text-white hover:text-white/100"
-                  : "text-red-900",
-              ]}
-            >
-              {page.name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <Hamburger />
+    <Navigation />
   </Main>
 </header>

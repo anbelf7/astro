@@ -1,0 +1,29 @@
+---
+import navigation from "../data/navigation.json";
+
+const pathname = Astro.url.pathname;
+const currentPath = pathname === "/" ? "/" : pathname.slice(1);
+---
+
+<ul
+  id="menu"
+  class="hidden flex-[1_1_100%] gap-x-8 text-center sm:flex sm:flex-[0_1_auto]"
+>
+  {
+    navigation.map((page) => (
+      <li>
+        <a
+          href={page.path}
+          class:list={[
+            "font-medium hover:text-white/50",
+            currentPath === page.path
+              ? "text-white hover:text-white/100"
+              : "text-red-900",
+          ]}
+        >
+          {page.name}
+        </a>
+      </li>
+    ))
+  }
+</ul>
