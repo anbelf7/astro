@@ -1,4 +1,8 @@
 ---
+// Per creare una navbar responsive con pulsante hamburger inserire `flex-wrap` nel container e nel child del menu `flex: 1 1 100%` quando è visualizzato sul mobile e `flex: 0 1 auto` quando viene visualizzato alle altre risoluzioni.
+// Importante è che il pulsante hamburger sia posizionato prima del menu.
+// Se si vuole aggiungere ad esempio un pulsante per la ricerca visualizzabile su mobile tramite pulsante hamburger deve essere nascosto quando è visualizzato sul mobile e flex quando viene visualizzato alle altre risoluzioni. In più aggiungere allo script js un toggle dove viene tolta e riaggiunta la visibilità.
+
 import { Image } from "astro:assets";
 // È consigliato che le immagini locali siano salvate in /src quando possibile in modo che Astro possa trasformarle, ottimizzarle e raggrupparle.
 // I file nella directory /public vengono sempre serviti o copiati nella cartella di compilazione così come sono, senza elaborazione.
@@ -23,5 +27,6 @@ import Hamburger from "./Hamburger.astro";
     </a>
     <Hamburger />
     <Navigation />
+    <!-- <div id="ricerca" class="hidden sm:flex">ricerca</div> -->
   </Main>
 </header>
