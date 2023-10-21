@@ -1,6 +1,7 @@
 ---
-import HeaderTest from "../components/HeaderTest.astro";
-import FooterTest from "../components/FooterTest.astro";
+import { ViewTransitions } from "astro:transitions";
+import HeaderTest from "@components/HeaderTest.astro";
+import FooterTest from "@components/FooterTest.astro";
 
 const { title = "Title" } = Astro.props;
 ---
@@ -14,6 +15,7 @@ const { title = "Title" } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
 
   <body
