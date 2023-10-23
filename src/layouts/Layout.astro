@@ -1,7 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import HeaderTest from "@components/HeaderTest.astro";
-import FooterTest from "@components/FooterTest.astro";
+import HeaderTest from "@/components/HeaderTest.astro";
+import FooterTest from "@/components/FooterTest.astro";
 
 const { title = "Title" } = Astro.props;
 ---
@@ -26,7 +26,7 @@ const { title = "Title" } = Astro.props;
     <FooterTest />
 
     <script>
-      import "@scripts/menu.js";
+      import "@/scripts/menu.js";
     </script>
   </body>
 </html>
