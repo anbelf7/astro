@@ -3,14 +3,20 @@ import { ViewTransitions } from "astro:transitions";
 import HeaderTest from "@/components/HeaderTest.astro";
 import FooterTest from "@/components/FooterTest.astro";
 
-const { title = "Title" } = Astro.props;
+// inserire titolo e descrizione sito
+const siteData = {
+  title: "Site title",
+  description: "Site description",
+};
+
+const { title = siteData.title, description = siteData.description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
