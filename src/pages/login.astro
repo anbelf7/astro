@@ -25,7 +25,8 @@ if (Astro.request.method === "POST") {
     Astro.cookies.set("pbToken", pb.authStore.token, {
       path: "/",
       httpOnly: true,
-      secure: true,
+      // Quando usata in produzione eliminare il commento:
+      //secure: true,
     });
     // }
 
