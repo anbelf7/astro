@@ -10,7 +10,6 @@ import { Image } from "astro:assets";
 import Main from "@/components/Main.astro";
 import Navigation from "@/components/Navigation.astro";
 import Hamburger from "@/components/Hamburger.astro";
-import Logout from "@/components/Logout";
 ---
 
 <header class="mb-10 bg-red-500 py-6 sm:mb-20 sm:py-10">
@@ -28,7 +27,6 @@ import Logout from "@/components/Logout";
     </a>
     <Hamburger />
     <Navigation />
-    <Logout client:load>Logout</Logout>
     <!-- <div id="ricerca" class="hidden sm:flex">ricerca</div> -->
   </Main>
 </header>
