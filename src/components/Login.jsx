@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ReloadIcon } from "@radix-ui/react-icons";
+import { ReloadIcon, Cross1Icon } from "@radix-ui/react-icons";
 
 const Login = () => {
   return (
@@ -42,4 +42,32 @@ const Login = () => {
     </Card>
   );
 };
+
+const refreshPage = () => {
+  window.location.reload(false);
+};
+
+export const ErrorForm = () => {
+  return (
+    <Card className="w-full max-w-sm">
+      <CardContent className="p-0">
+        <div className="flex items-center space-x-4 rounded-md p-4">
+          <Cross1Icon color="red" />
+          <div className="flex-1 space-y-1">
+            <p className="text-sm font-medium leading-none text-red-500">
+              Errore login
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Nome utente o password errata.
+            </p>
+          </div>
+          <Button variant="destructive" className="flex" onClick={refreshPage}>
+            Riprova
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
 export default Login;

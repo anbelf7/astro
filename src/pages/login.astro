@@ -1,8 +1,10 @@
 ---
 import Login from "@/layouts/Login.astro";
-import LoginForm from "@/components/Login";
+import LoginForm, { ErrorForm } from "@/components/Login";
 
 import pb from "@/lib/pocketbase";
+
+let err = false;
 
 if (Astro.request.method === "POST") {
   try {
@@ -37,6 +39,7 @@ if (Astro.request.method === "POST") {
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
+      err = true
       // console.log(pb.authStore.isValid);
     }
   }
@@ -46,7 +49,7 @@ if (Astro.request.method === "POST") {
 <Login>
   <main class="flex h-screen content-center justify-center">
     <form method="POST" class="content-center justify-center">
-      <LoginForm />
+      {err ? <ErrorForm client:load /> : <LoginForm />}
     </form>
   </main>
 </Login>
