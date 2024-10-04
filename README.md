@@ -22,6 +22,9 @@ Se si deve usare Google Sheets creare anche un account Gmail usando come email s
 
 ## Environment Variables
 
-Per questo progetto bisogna aggiungere la seguente variabile d'ambiente nel file `.env.local`: `POCKETBASE_URL`
+Per questo progetto bisogna aggiungere la seguente variabile d'ambiente nel file `.env.local`: 
+```
+POCKETBASE_URL:<link pockethost>
+```
 
 Se per pubblicare il sito si usa [Netlify]() aggiungere il link [Pockethost]() nelle variabili d'ambiente direttamente nel pannello di controllo di Netlify.
