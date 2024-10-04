@@ -28,7 +28,9 @@ import Logout from "@/components/Logout";
     </a>
     <Hamburger />
     <Navigation />
-    <Logout client:load>Logout</Logout>
+    <div class="hidden sm:flex">
+      <Logout client:load>Logout</Logout>
+    </div>
     <!-- <div id="ricerca" class="hidden sm:flex">ricerca</div> -->
   </Main>
 </header>

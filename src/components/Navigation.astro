@@ -1,4 +1,5 @@
 ---
+import Logout from "@/components/Logout";
 import navigation from "@/data/navigation.json";
 
 const pathname = Astro.url.pathname;
@@ -26,4 +27,7 @@ const currentPath = pathname === "/" ? "/" : pathname.slice(1);
       </li>
     ))
   }
+  <div class="contents sm:hidden">
+    <Logout client:load>Logout</Logout>
+  </div>  
 </ul>
