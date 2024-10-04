@@ -60,10 +60,10 @@ esac
 
 echo "Modifico file .gitignore"
 sed -i '' '/\.env\.production/a\
-\  .env.local
+.env.local
 ' .gitignore
 sed -i '' '$a\
-\  astroInit.sh
+astroInit.sh
 ' .gitignore
 
 # Avvio VSCode
