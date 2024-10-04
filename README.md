@@ -2,7 +2,8 @@
 
 ## Descrizione
 
-Questo è un template per la creazione di siti web con [Astro](), pensato per essere leggero, performante e facile da personalizzare. Include funzionalità integrate come il supporto per componenti React, gestione login con [Pocketbase]() e ottimizzazioni SEO preconfigurate.
+Questo è un template per la creazione di siti web con [Astro](), pensato per essere leggero, performante e facile da personalizzare.<br/>
+Include funzionalità integrate come il supporto per componenti React, gestione login con [Pocketbase]() e ottimizzazioni SEO preconfigurate.
 
 ## :space_invader: Technology
 
@@ -20,13 +21,11 @@ Per installare il template andare nella cartella dove si vuole installare il pro
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/anbelf7/astro/refs/heads/login/astroInit.sh)"
 ```
 
-Creare una email con [Onmail]() e dopo un account su [Pockethost]() e uno su [Netlify]().
+Creare una email con [Onmail]() e dopo un account su [Pockethost]() e uno su [Netlify]().<br/>
 Se si deve usare Google Sheets creare anche un account Gmail usando come email secondaria quella di Onmail.
 
 ## :key: Environment Variables
 
-Per questo progetto bisogna aggiungere la seguente variabile d'ambiente nel file `.env.local`:
-
-`POCKETBASE_URL`
+Per questo progetto bisogna aggiungere la seguente variabile d'ambiente nel file `.env.local`: `POCKETBASE_URL`
 
 Se per pubblicare il sito si usa [Netlify]() aggiungere il link [Pockethost]() nelle variabili d'ambiente direttamente nel pannello di controllo di Netlify.
