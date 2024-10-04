@@ -50,6 +50,13 @@ s|S)
   sed -i '' '/defineConfig({/a\
   \  output: "server",
   ' astro.config.mjs
+  sed -i '' '/\.env\.production/a\
+  \  .env.local
+  ' .gitignore
+  sed -i '' '/# jetbrains setting folder/a\
+  \  # script\
+  \  astroInit.sh
+  ' .gitignore
   npm i pocketbase
   npx shadcn@latest add button card input label
   ;;
