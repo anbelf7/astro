@@ -1,7 +1,5 @@
 # Astro Starter Kit + Login
 
-## Descrizione
-
 Questo è un template per la creazione di siti web con [Astro](), pensato per essere leggero, performante e facile da personalizzare.<br/>
 Include funzionalità integrate come il supporto per componenti React, gestione login con [Pocketbase]() e ottimizzazioni SEO preconfigurate.
 
