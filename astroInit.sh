@@ -62,8 +62,7 @@ echo "Modifico file .gitignore"
 sed -i '' '/\.env\.production/a\
 \  .env.local
 ' .gitignore
-sed -i '' '/# jetbrains setting folder/a\
-\  # script\
+sed -i '' '$a\
 \  astroInit.sh
 ' .gitignore
 
